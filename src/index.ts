@@ -24,7 +24,7 @@ export const toRoman = (number: number) => {
     }
 
     // No zero.
-    if (number == 0) {
+    if (number === 0) {
       throw new RangeError(`(arg): number must not be zero.`);
     }
 
