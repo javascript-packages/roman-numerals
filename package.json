@@ -12,6 +12,7 @@
     "test": "tsdx test",
     "coverage": "tsdx test --coverage",
     "lint": "tsdx lint",
+    "format": "prettier --write ./**/*.ts",
     "commit": "git-cz && git push",
     "prepare": "tsdx build",
     "size": "size-limit",
