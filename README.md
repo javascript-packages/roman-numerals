@@ -1,6 +1,6 @@
 # Roman Numerals
 
-[![Build](../../actions/workflows/main.yml/badge.svg)](../../actions/workflows/main.yml)
+[![Build](https://github.com/javascript-packages/roman-numerals/actions/workflows/main.yml/badge.svg)](https://github.com/javascript-packages/roman-numerals/actions/workflows/main.yml)
 [![Coverage Status](https://coveralls.io/repos/github/javascript-packages/roman-numerals/badge.svg?branch=main)](https://coveralls.io/github/javascript-packages/roman-numerals?branch=main)
 
 Easily convert integers to roman numerals in one line of code.
