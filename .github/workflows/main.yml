@@ -37,7 +37,7 @@ jobs:
   release:
     runs-on: ubuntu-latest
     if: ${{ github.ref == 'refs/heads/main' }}
-    need: [quality]
+    needs: [quality]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
