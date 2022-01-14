@@ -1,0 +1,54 @@
+name: Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: '*'
+
+jobs:
+  quality:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        node-versions: [10.x, 12.x, 14.x, 16.x]
+        os: [ubuntu-latest, windows-latest, macos-latest]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install Dependencies
+        run: npm ci
+      - name: Build
+        run: npm run build --if-present
+      - name: Lint
+        run: npm run lint --if-present
+      - name: Test & Coverage
+        run: npm run coverage --if-present
+      - name: Upload Coverage Report
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+  release:
+    runs-on: ubuntu-latest
+    if: ${{ github.ref == 'refs/heads/main' }}
+    need: [quality]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Use Node.js $${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install Dependencies
+        run: npm ci
+      - name: Create Release
+        run: npm run semantic-release
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
