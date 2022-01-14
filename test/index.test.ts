@@ -6,7 +6,7 @@ describe('Roman Converter', () => {
     const number = 1;
 
     // act
-    const want = "I"
+    const want = 'I';
     const have = toRoman(number);
 
     // assert
@@ -18,7 +18,7 @@ describe('Roman Converter', () => {
     const number = 4;
 
     // act
-    const want = "IV"
+    const want = 'IV';
     const have = toRoman(number);
 
     // assert
@@ -30,7 +30,7 @@ describe('Roman Converter', () => {
     const number = 5;
 
     // act
-    const want = "V"
+    const want = 'V';
     const have = toRoman(number);
 
     // assert
@@ -42,7 +42,7 @@ describe('Roman Converter', () => {
     const number = 9;
 
     // act
-    const want = "IX"
+    const want = 'IX';
     const have = toRoman(number);
 
     // assert
@@ -54,7 +54,7 @@ describe('Roman Converter', () => {
     const number = 10;
 
     // act
-    const want = "X"
+    const want = 'X';
     const have = toRoman(number);
 
     // assert
@@ -66,7 +66,7 @@ describe('Roman Converter', () => {
     const number = 40;
 
     // act
-    const want = "XL"
+    const want = 'XL';
     const have = toRoman(number);
 
     // assert
@@ -78,7 +78,7 @@ describe('Roman Converter', () => {
     const number = 50;
 
     // act
-    const want = "L"
+    const want = 'L';
     const have = toRoman(number);
 
     // assert
@@ -90,7 +90,7 @@ describe('Roman Converter', () => {
     const number = 90;
 
     // act
-    const want = "XC"
+    const want = 'XC';
     const have = toRoman(number);
 
     // assert
@@ -102,7 +102,7 @@ describe('Roman Converter', () => {
     const number = 100;
 
     // act
-    const want = "C"
+    const want = 'C';
     const have = toRoman(number);
 
     // assert
@@ -114,7 +114,7 @@ describe('Roman Converter', () => {
     const number = 400;
 
     // act
-    const want = "CD"
+    const want = 'CD';
     const have = toRoman(number);
 
     // assert
@@ -126,7 +126,7 @@ describe('Roman Converter', () => {
     const number = 500;
 
     // act
-    const want = "D"
+    const want = 'D';
     const have = toRoman(number);
 
     // assert
@@ -138,7 +138,7 @@ describe('Roman Converter', () => {
     const number = 900;
 
     // act
-    const want = "CM"
+    const want = 'CM';
     const have = toRoman(number);
 
     // assert
@@ -150,7 +150,7 @@ describe('Roman Converter', () => {
     const number = 1000;
 
     // act
-    const want = "M"
+    const want = 'M';
     const have = toRoman(number);
 
     // assert
@@ -162,7 +162,7 @@ describe('Roman Converter', () => {
     const number = 4999;
 
     // act
-    const want = "MMMMCMXCIX"
+    const want = 'MMMMCMXCIX';
     const have = toRoman(number);
 
     // assert
@@ -174,8 +174,12 @@ describe('Roman Converter', () => {
     const number = -1;
 
     // assert
-    expect(() => { toRoman(number) }).toThrow(RangeError);
-    expect(() => { toRoman(number) }).toThrow('(arg): number must be non-negativ.');
+    expect(() => {
+      toRoman(number);
+    }).toThrow(RangeError);
+    expect(() => {
+      toRoman(number);
+    }).toThrow('(arg): number must be non-negativ.');
   });
 
   it('should fail on zero.', () => {
@@ -183,8 +187,12 @@ describe('Roman Converter', () => {
     const number = 0;
 
     // assert
-    expect(() => { toRoman(number) }).toThrow(RangeError);
-    expect(() => { toRoman(number) }).toThrow('(arg): number must not be zero.');
+    expect(() => {
+      toRoman(number);
+    }).toThrow(RangeError);
+    expect(() => {
+      toRoman(number);
+    }).toThrow('(arg): number must not be zero.');
   });
 
   it('should fail if maximum value (4999) is exceeded.', () => {
@@ -192,7 +200,11 @@ describe('Roman Converter', () => {
     const number = 5000;
 
     // assert
-    expect(() => { toRoman(number) }).toThrow(RangeError);
-    expect(() => { toRoman(number) }).toThrow('(arg): number must be less than or equal to 4999.');
+    expect(() => {
+      toRoman(number);
+    }).toThrow(RangeError);
+    expect(() => {
+      toRoman(number);
+    }).toThrow('(arg): number must be less than or equal to 4999.');
   });
 });
