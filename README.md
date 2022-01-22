@@ -2,6 +2,7 @@
 
 [![Build](https://github.com/javascript-packages/roman-numerals/actions/workflows/main.yml/badge.svg)](https://github.com/javascript-packages/roman-numerals/actions/workflows/main.yml)
 [![Coverage Status](https://coveralls.io/repos/github/javascript-packages/roman-numerals/badge.svg?branch=main)](https://coveralls.io/github/javascript-packages/roman-numerals?branch=main)
+![NPM Total Downloads](https://img.shields.io/npm/dt/@javascript-packages/roman-numerals)
 
 Easily convert integers to roman numerals in one line of code.
 
