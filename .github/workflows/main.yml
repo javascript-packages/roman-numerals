@@ -36,6 +36,14 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
   release:
     runs-on: ubuntu-latest
+    # GitHub Actions: Workflows triggered by Dependabot PRs
+    # will respect permissions key in workflows.
+    # Reference: https://github.blog/changelog/2021-04-20-github-actions-control-permissions-for-github_token/
+    permissions:
+      # Semantic Release required permissions: https://github.com/semantic-release/github#github-authentication
+      contents: write
+      issues: write
+      pull-requests: write
     if: ${{ github.ref == 'refs/heads/main' }}
     needs: [quality]
     steps:
@@ -54,11 +62,3 @@ jobs:
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        # GitHub Actions: Workflows triggered by Dependabot PRs
-        # will respect permissions key in workflows.
-        # Reference: https://github.blog/changelog/2021-04-20-github-actions-control-permissions-for-github_token/
-        permissions:
-          # Semantic Release required permissions: https://github.com/semantic-release/github#github-authentication
-          contents: write
-          issues: write
-          pull-requests: write
