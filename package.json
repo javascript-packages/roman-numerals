@@ -3,6 +3,10 @@
   "version": "0.0.0-development",
   "description": "Easily convert integers to roman numerals in one line of code.",
   "license": "MIT",
+  "keywords": [
+    "roman number",
+    "roman numerals"
+  ],
   "engines": {
     "node": ">=10"
   },
@@ -19,7 +23,6 @@
     "analyze": "size-limit --why",
     "semantic-release": "semantic-release --branches main"
   },
-  "dependencies": {},
   "devDependencies": {
     "@size-limit/preset-small-lib": "^7.0.5",
     "cz-conventional-changelog": "^3.3.0",
