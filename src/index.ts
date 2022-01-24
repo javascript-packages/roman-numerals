@@ -11,6 +11,9 @@ export type Roman = {
  *
  * @param number An integer. Must be in range [1, 4999].
  * @returns Roman numeral.
+ * @throws {RangeError} Argument number must be non-negative.
+ * @throws {RangeError} Argument number must be non-zero.
+ * @throws {RangeError} Argument number must be less than or equal to 4999.
  */
 export const toRoman = (number: number) => {
   const recurse = (
