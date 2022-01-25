@@ -19,7 +19,7 @@ npm i @javascript-packages/roman-numerals
 By using the following code snippet you can convert numbers in the interval `[1, 4999]` to Roman numerals.
 
 ```js
-import { toRoman } from 'javascript-packages/roman-numerals';
+import { toRoman } from '@javascript-packages/roman-numerals';
 
 const romanNumeral = toRoman(2022);
 console.log(romanNumeral); // MMXXII
