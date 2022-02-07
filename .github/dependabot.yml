@@ -11,6 +11,6 @@ updates:
       interval: daily
     commit-message:
       # Prefix all commit messages with "fix(deps)"
-      prefix: 'fix(deps):'
+      prefix: 'fix'
       prefix-development: 'build' # dev dependencies
       include: 'scope'
