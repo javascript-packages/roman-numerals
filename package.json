@@ -24,11 +24,11 @@
     "semantic-release": "semantic-release --branches main"
   },
   "devDependencies": {
-    "@size-limit/preset-small-lib": "^7.0.5",
+    "@size-limit/preset-small-lib": "^8.0.0",
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^8.0.1",
     "semantic-release": "^19.0.2",
-    "size-limit": "^7.0.5",
+    "size-limit": "^8.0.0",
     "tsdx": "^0.14.1",
     "tslib": "^2.3.1",
     "typescript": "^4.5.4"
